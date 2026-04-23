@@ -59,12 +59,6 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     h1,h2,h3,h4{text-wrap:balance;text-rendering:optimizeLegibility}
     :root{--bg-header:rgba(6,10,20,0.97);--bg-hero-a:#060A14;--bg-hero-b:#0A1628;--bg-hero-c:#0F1F3D;--bg-about:#04080F;--bg-footer:#020509;--navy:#0A1628;--navy-dk:#060A14;--navy-lt:#152238;--accent:#F59E0B;--accent-dk:#D97706;--accent-lt:rgba(245,158,11,0.15);--accent-md:#FBBF24;--accent-50:#10140A;--accent-gl:rgba(245,158,11,0.2);--accent-tag:#FBBF24;--gray-w:#5E7799;--gray-50:#0D1829;--gray-100:#162238;--gray-500:#A7BDD9;--gray-600:#C8D8EE;--gray-800:#E8F0FC;--emerald:#10b981;--em-dark:#059669;--em-lt:rgba(16,185,129,0.18);--em-200:#6ee7b7;--white:#ffffff;--font:'Inter',system-ui,-apple-system,sans-serif;--font-display:'Montserrat',system-ui,-apple-system,sans-serif;--radius:14px;--focus:#FBBF24}
-    body.theme-forest{--bg-header:rgba(11,23,14,0.97);--bg-hero-a:#0A1610;--bg-hero-b:#162D20;--bg-hero-c:#1A3D28;--bg-about:#081410;--bg-footer:#050C08;--navy:#162D20;--navy-dk:#0A1610;--navy-lt:#1E4030;--accent:#C47B35;--accent-dk:#A0602A;--accent-lt:#F5E6D0;--accent-md:#D4956A;--accent-50:#FDF6EE;--accent-gl:rgba(196,123,53,0.18);--accent-tag:#7A4420;--gray-50:#F7F6F4;--gray-100:#EAE5DC}
-    body.theme-crimson{--bg-header:rgba(14,18,24,0.97);--bg-hero-a:#0E1218;--bg-hero-b:#1C2430;--bg-hero-c:#1E2C40;--bg-about:#0A0E14;--bg-footer:#06080E;--navy:#1C2430;--navy-dk:#0E1218;--navy-lt:#283444;--accent:#DC2626;--accent-dk:#B91C1C;--accent-lt:#FEE2E2;--accent-md:#F87171;--accent-50:#FFF5F5;--accent-gl:rgba(220,38,38,0.18);--accent-tag:#991B1B;--gray-50:#F9F9F9;--gray-100:#EBEBEB}
-    body.theme-gold{--bg-header:rgba(8,14,34,0.97);--bg-hero-a:#060C1E;--bg-hero-b:#0F1F3D;--bg-hero-c:#122550;--bg-about:#050A1A;--bg-footer:#03060E;--navy:#0F1F3D;--navy-dk:#060C1E;--navy-lt:#1A3060;--accent:#C9A227;--accent-dk:#A8831E;--accent-lt:#FDF8DC;--accent-md:#E5C84A;--accent-50:#FFFDE7;--accent-gl:rgba(201,162,39,0.18);--accent-tag:#7A5A0A;--gray-50:#FAFAF8;--gray-100:#F0EDD8}
-    body.theme-azure{--bg-header:rgba(10,12,38,0.97);--bg-hero-a:#080A24;--bg-hero-b:#0F1440;--bg-hero-c:#121A55;--bg-about:#060818;--bg-footer:#03040C;--navy:#0F1440;--navy-dk:#080A24;--navy-lt:#1A2464;--accent:#3B82F6;--accent-dk:#2563EB;--accent-lt:#DBEAFE;--accent-md:#60A5FA;--accent-50:#EFF6FF;--accent-gl:rgba(59,130,246,0.2);--accent-tag:#1E40AF;--gray-50:#F8FAFF;--gray-100:#E0E8F8}
-    body.theme-teal{--bg-header:rgba(9,16,24,0.97);--bg-hero-a:#090F18;--bg-hero-b:#182535;--bg-hero-c:#1A2E44;--bg-about:#060D14;--bg-footer:#03070C;--navy:#182535;--navy-dk:#090F18;--navy-lt:#223344;--accent:#0D9488;--accent-dk:#0F766E;--accent-lt:#CCFBF1;--accent-md:#2DD4BF;--accent-50:#F0FDFA;--accent-gl:rgba(13,148,136,0.2);--accent-tag:#134E4A;--gray-50:#F5FAF9;--gray-100:#D8F0EC}
-
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-synthesis:none}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
     body{font-family:var(--font);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:var(--gray-800);background:#060A14;line-height:1.7}
@@ -202,7 +196,7 @@
     .footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
     .footer-brand p{font-family:var(--font);font-size:.82rem;color:rgba(255,255,255,0.55);line-height:1.65;max-width:28ch;margin-top:.6rem}
     .footer-nav{display:flex;gap:2.5rem;flex-wrap:wrap}
-    .footer-col h4{font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.01em;color:rgba(255,255,255,0.62);margin-bottom:.75rem;text-transform:uppercase}
+    .footer-col h4{font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.01em;color:rgba(255,255,255,0.62);margin-bottom:.75rem}
     .footer-col a{display:block;font-family:var(--font);font-size:.84rem;color:rgba(255,255,255,0.62);text-decoration:none;margin-bottom:.4rem;transition:color .15s;padding:.25rem 0}
     .footer-col a:hover{color:#fff}
     .footer-divider{border:none;border-top:1px solid rgba(255,255,255,0.1)}
@@ -212,21 +206,34 @@
     .cb{display:inline-flex;align-items:center;gap:.35rem;padding:.35rem .7rem;border:1px solid rgba(255,255,255,0.2);border-radius:6px;text-decoration:none;color:rgba(255,255,255,0.65);font-family:var(--font);font-size:.68rem;font-weight:500;letter-spacing:.01em;transition:color .15s,border-color .15s,background .15s;white-space:nowrap;min-height:28px}
     .cb:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.06)}
 
-    /* THEME PICKER */
-    .tp{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;align-items:center;gap:.45rem;background:rgba(4,8,18,0.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:.45rem .7rem;border-radius:99px;border:1px solid rgba(255,255,255,0.1);z-index:999}
-    .tp-label{font-family:var(--font-display);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.55);padding-right:.35rem}
-    .tp-btn{width:22px;height:22px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform .15s,border-color .15s;padding:0}
-    .tp-btn:hover{transform:scale(1.25)}
-    .tp-btn:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-    .tp-btn.active{border-color:#fff;transform:scale(1.1)}
+    /* HERO CTA BUTTONS */
+    .hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.25rem}
+    .btn-hero-primary{font-family:var(--font-display);display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.1rem;background:var(--accent);color:#0A1628;border-radius:9px;font-size:1rem;font-weight:700;letter-spacing:.02em;text-decoration:none;transition:background .18s,transform .18s,box-shadow .18s;min-height:48px;box-shadow:0 4px 18px rgba(245,158,11,0.35)}
+    .btn-hero-primary:hover{background:var(--accent-dk);transform:translateY(-2px);box-shadow:0 8px 28px rgba(245,158,11,0.45);color:#fff}
+    .btn-hero-secondary{font-family:var(--font-display);display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.1rem;background:transparent;color:rgba(255,255,255,0.85);border-radius:9px;font-size:1rem;font-weight:600;letter-spacing:.02em;text-decoration:none;transition:color .18s,background .18s,border-color .18s;min-height:48px;border:1.5px solid rgba(255,255,255,0.25)}
+    .btn-hero-secondary:hover{color:#fff;background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.45)}
+
+    /* MOBILE NAV TOGGLE */
+    .nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:0;background:transparent;border:none;cursor:pointer;border-radius:8px;transition:background .15s}
+    .nav-toggle:hover{background:rgba(255,255,255,0.08)}
+    .nav-toggle:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+    .nav-toggle-bar{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .15s ease}
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2){opacity:0;transform:scaleX(0)}
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
     /* RESPONSIVE */
     @media(max-width:720px){
       nav{display:none}
+      nav.nav-open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(6,10,20,0.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:1rem 1.5rem 1.75rem;border-bottom:1px solid rgba(255,255,255,0.12);z-index:199;gap:0;animation:navSlideIn .2s ease}
+      nav.nav-open a{font-size:.9rem;padding:.8rem .25rem;border-bottom:1px solid rgba(255,255,255,0.07);width:100%;letter-spacing:.04em}
+      nav.nav-open .nav-cta{margin-top:.75rem;text-align:center;justify-content:center;border-bottom:none;border-radius:8px}
+      .nav-toggle{display:flex}
       .about-inner{grid-template-columns:1fr;text-align:center;gap:1.5rem}
       .about-logo{margin:0 auto}
       .footer-top{flex-direction:column}
     }
+    @keyframes navSlideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 
     /* Screen-reader only utility */
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -365,11 +372,16 @@
       </svg>
       <span class="logo-wordmark">GUARD<em>POINT</em></span>
     </a>
-    <nav aria-label="Primary navigation">
+    <nav id="primary-nav" aria-label="Primary navigation">
       <a href="#leadsafe">LeadSafe Ohio</a>
       <a href="#technology">Technology</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
 
@@ -411,6 +423,14 @@
       <span class="badge badge-accent">
         <span class="badge-dot" aria-hidden="true"></span>Technology Consulting
       </span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#contact" class="btn-hero-primary">
+        Get Started Today
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#services" class="btn-hero-secondary">Our Services</a>
     </div>
 
   </div>
@@ -806,6 +826,84 @@
 </footer>
 
 
+<!-- FAQ structured data — FAQPage schema for accordion content -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the lead disclosure requirements for pre-1978 housing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under 42 U.S.C. § 4852d and 40 CFR Part 745, sellers and landlords of pre-1978 residential housing must disclose all known lead-based paint hazards before sale or lease. They must provide the EPA pamphlet \"Protect Your Family from Lead in Your Home,\" complete a signed Lead Disclosure Addendum retained for at least 3 years, and allow buyers a 10-day inspection period. Penalties can reach $19,507 per violation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Cleveland's lead-safe housing requirements for landlords?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cleveland's Lead Safe Housing Ordinance (Chapter 365) requires landlords to obtain a Lead Safe Certificate before renting any pre-1978 residential property. The certificate is valid for 2 years and requires visual assessment plus dust-wipe sampling. It is managed by the Cleveland Department of Public Health, Division of Environment. Non-compliant landlords may face rental registration suspension and fines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What encapsulants are approved for lead paint in Ohio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ohio EPA maintains a registry of approved encapsulants under Ohio Administrative Code 3701-32. Products must meet ASTM E1795 or ASTM E1797 standards. Commonly approved products include Fiberlock Safe Encapsulant, SealBest, and Zinsser Bulls Eye 1-2-3. Application must be performed by an Ohio-certified lead abatement contractor, with re-inspection every 1–3 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are backup best practices for small businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow the 3-2-1 Rule: keep 3 copies of your data on 2 different media types with 1 stored offsite or in the cloud. Run daily incremental and weekly full backups. Test restores quarterly. Use air-gapped or immutable backups to protect against ransomware. Encrypt all backup data at rest and in transit. Retain at least 30 days of restore points."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a small business use on-site or cloud-hosted technology solutions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The right choice depends on your size, data sensitivity, and budget. On-site offers full data control with no recurring fees but requires local maintenance. Cloud-hosted provides predictable monthly costs and easy scaling. A hybrid approach — keeping sensitive data on-prem while using cloud for email and collaboration — works best for most small businesses. Moving from in-house Exchange to Microsoft 365 typically saves $3,000–$8,000/year over 5 years."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var toggle=document.getElementById('nav-toggle');
+  var nav=document.getElementById('primary-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var expanded=this.getAttribute('aria-expanded')==='true';
+    this.setAttribute('aria-expanded',String(!expanded));
+    this.setAttribute('aria-label',expanded?'Open navigation menu':'Close navigation menu');
+    nav.classList.toggle('nav-open');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Open navigation menu');
+      nav.classList.remove('nav-open');
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click',function(e){
+    if(nav.classList.contains('nav-open')&&!nav.contains(e.target)&&!toggle.contains(e.target)){
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Open navigation menu');
+      nav.classList.remove('nav-open');
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
