@@ -190,6 +190,27 @@
     .label-gray{color:var(--gray-500)}
     .contact-address{font-style:normal;display:contents}
 
+    /* CONTACT FORM */
+    .contact-form-wrap{max-width:620px;margin:2.5rem auto 0;background:#162238;border:1px solid #1E3050;border-radius:var(--radius);padding:2.25rem;box-shadow:0 4px 24px rgba(0,0,0,0.4)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .form-field{display:flex;flex-direction:column;gap:.4rem}
+    .form-field.full{grid-column:1/-1}
+    .form-field label{font-family:var(--font-display);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gray-500)}
+    .form-field input,.form-field select,.form-field textarea{font-family:var(--font);font-size:.9375rem;color:var(--gray-800);background:#0A1628;border:1px solid #1E3050;border-radius:8px;padding:.7rem 1rem;transition:border-color .18s,box-shadow .18s;outline:none;min-height:44px;width:100%}
+    .form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,0.3)}
+    .form-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A7BDD9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .85rem center;padding-right:2.2rem;cursor:pointer}
+    .form-field select option{background:#162238}
+    .form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(245,158,11,0.15)}
+    .form-field textarea{resize:vertical;min-height:120px;line-height:1.6}
+    .form-submit{width:100%;padding:.85rem;background:var(--accent);color:#0A1628;border:none;border-radius:9px;font-family:var(--font-display);font-size:.95rem;font-weight:700;letter-spacing:.03em;cursor:pointer;transition:background .18s,transform .18s,box-shadow .18s;min-height:48px;display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.5rem}
+    .form-submit:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 6px 20px rgba(245,158,11,0.35)}
+    .form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+    .form-success{display:none;text-align:center;padding:2rem 1rem}
+    .form-success svg{margin:0 auto 1rem;display:block}
+    .form-success h3{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+    .form-success p{font-family:var(--font);color:var(--gray-500);font-size:.9375rem}
+    @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+
     /* FOOTER */
     footer{background:var(--bg-footer);color:rgba(255,255,255,0.62);padding:3rem 1.5rem 2rem}
     .footer-inner{max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:2rem}
@@ -687,6 +708,7 @@
     <h2 id="contact-heading">Get in Touch</h2>
     <p class="contact-lead">Ready to work together? Reach out and we'll respond promptly.</p>
 
+    <!-- Quick contact cards -->
     <address class="contact-address">
     <div class="contact-options">
 
@@ -730,6 +752,66 @@
 
     </div>
     </address>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrap">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="12c82faf-79df-4fd1-bbbd-5d4ded0e80e7">
+        <input type="hidden" name="subject" value="New inquiry from GuardPoint website">
+        <input type="hidden" name="from_name" value="GuardPoint Website">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+
+          <div class="form-field">
+            <label for="cf-phone">Phone <span style="font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.35)">(optional)</span></label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="(440) 555-0100" autocomplete="tel">
+          </div>
+
+          <div class="form-field full">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form-field full">
+            <label for="cf-service">I'm inquiring about</label>
+            <select id="cf-service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="Lead Risk Assessment">Lead Risk Assessment (LeadSafe Ohio)</option>
+              <option value="Cleveland Lead Safe Certificate">Cleveland Lead Safe Certificate</option>
+              <option value="Technology Consulting">Technology Consulting</option>
+              <option value="Email & Network Setup">Email &amp; Network Setup</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-field full">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us a little about your project or property…" required></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="form-submit" id="cf-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Message
+        </button>
+
+      </form>
+
+      <!-- Success state -->
+      <div class="form-success" id="cf-success" aria-live="polite">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+        <h3>Message sent!</h3>
+        <p>We'll get back to you within one business day.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -877,6 +959,41 @@
 </script>
 
 <script>
+// Contact form submission
+(function(){
+  var form=document.getElementById('contact-form');
+  var btn=document.getElementById('cf-submit');
+  var success=document.getElementById('cf-success');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.disabled=true;
+    btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Sending…';
+    var data=new FormData(form);
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d.success){
+          form.style.display='none';
+          success.style.display='block';
+        } else {
+          btn.disabled=false;
+          btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+          alert('Something went wrong — please email us directly at helpdesk@guardpointgrp.com');
+        }
+      })
+      .catch(function(){
+        btn.disabled=false;
+        btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+        alert('Network error — please try again or email helpdesk@guardpointgrp.com');
+      });
+  });
+})();
+</script>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<script>
+// Nav toggle
 (function(){
   var toggle=document.getElementById('nav-toggle');
   var nav=document.getElementById('primary-nav');
@@ -907,4 +1024,3 @@
 
 </body>
 </html>
-
