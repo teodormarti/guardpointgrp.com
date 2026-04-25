@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Background fill so corners are solid on iOS -->
+  <rect width="60" height="60" fill="#0A1628" rx="8"/>
+  <!-- Shield -->
+  <path d="M30 56 C30 56 51 45.5 51 30 V13.5 L30 4 L9 13.5 V30 C9 45.5 30 56 30 56 Z" fill="#0A1628" stroke="#F59E0B" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Shackle -->
+  <path d="M22.5 27.5 V21.5 Q22.5 14 30 14 Q37.5 14 37.5 21.5 V27.5" stroke="#F59E0B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Lock body -->
+  <rect x="17.5" y="26" width="25" height="17" rx="4" fill="#F59E0B"/>
+  <!-- Keyhole circle -->
+  <circle cx="30" cy="33.5" r="3" fill="#0A1628"/>
+  <!-- Keyhole stem -->
+  <rect x="28.8" y="33.5" width="2.4" height="5" rx="1.2" fill="#0A1628"/>
+</svg>
